@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <name>Glossary</name>
+    <description>Word glossary</description>
+    <author>Preceptor Educação a Distância</author>
+    <version>1.0</version>
+    <license>GPL 3</license>
+    <keywords>glossary, word, dictionary</keywords>
+    <url>http://www.preceptoread.com.br</url>
+    
+    <files>
+        <sql>
+            <install>data/sql/install.sql</install>
+            <uninstall>data/sql/uninstall.sql</uninstall>
+        </sql>
+        <languages>
+            <language name="pt_BR">data/language/pt_BR/glossary.csv</language>
+        </languages>
+    </files>
+    
+    <menus>
+        <menu type="tri_classroom_menu">
+            <item group="support" resource="glossary/index/index">glossary</item>    
+        </menu>
+    </menus>
+    
+    <access>
+        <resource role="identified">glossary/index/index</resource>
+        <resource role="teacher">glossary/index/form</resource>
+        <resource role="teacher">glossary/index/save</resource>
+        <resource role="teacher">glossary/index/delete</resource>
+    </access>
+</configuration>
