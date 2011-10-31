@@ -55,11 +55,12 @@ class Glossary_Form_Glossary extends Zend_Form
                     ->addValidators($validators['description'])
                     ->addFilters($filters['description'])
                     ->setAttrib('rows', 15)
+                    ->setAttrib('class', 'xxlarge')
                     ->setAllowEmpty(false);
 
         $this->addElement($id)
              ->addElement($word)
              ->addElement($description)
-             ->addElement('submit', 'Save');
+             ->addElement('submit', 'Save', array('class' => 'btn primary'));
    }
 }

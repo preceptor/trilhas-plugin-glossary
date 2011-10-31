@@ -73,7 +73,7 @@ class Glossary_IndexController extends Tri_Controller_Action
             }
 
             $this->_helper->_flashMessenger->addMessage('Success');
-            $this->_redirect('glossary/index/form/id/'.$id);
+            $this->_redirect('glossary/index/index/id/'.$id);
         }
 
         $this->view->messages = array('Error');
